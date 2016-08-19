@@ -2,9 +2,6 @@
   border-radius: 5px;
 }
 /*Secret address tag styling*/
-input{
-  width: auto;
-}
 a{
   color: #333;
   font-style: italic;
@@ -15,15 +12,15 @@ a:hover {
   color: #333;
   text-decoration: none;
 }
-button{
-  margin-left: 20px;
-}
 .container{
   padding-top: 15px;
   background-color: #99ccff;
 }
-#myName{
-  font-style: italic;
+#play, #enterLabel{
+  margin-left: 20px;
+}
+#enterLabel{
+  margin-right: 20px;
 }
 #mySidebar{
   float: left;
@@ -69,12 +66,12 @@ button{
     margin-right: 0px;
     width: 100%;
   }
-  #mysidebarBackground{
+  #mysidebarBackground, #myFormBackground{
     margin-right: 0px;
     margin-left: 0px;
   }
-  #myFormBackground{
-    margin-right: 0px;
+  #play, #enterLabel{
     margin-left: 0px;
+    margin-right: 0px;
   }
 }
