@@ -15,11 +15,21 @@
     <div>
       <div id="mySidebar">
         <div id="mysidebarBackground">
+          <div id="about"
           <h3>About my page</h3>
           <ul>
             <li>Created by:<ul><li><a href="http://www.google.com/search?q=Yusuf+Qedan">Yusuf Qedan</a></li></ul></li>
             <li>Github Username:<ul><li><a href="https://github.com/yqedan">yqedan</a></li></ul></li>
           </ul>
+        </div>
+          <form id="arrayForm">
+            <div class="form-group">
+              <label id="enterLabel"for="numberEntered">Enter your word.</label><br>
+              <input type="text" id="word"><br>
+              <button id="useArray" type="submit" name="button" class="btn btn-success">Reverse word!</button>
+            </div>
+            <span id="reverseWord"></span>
+          </form>
           </div>
       </div>
       <form id="myForm">
@@ -29,12 +39,13 @@
             <li>Numbers divisible by 3 become "ping"</li>
             <li>Numbers divisible by 5 become "ping"</li>
             <li>Numbers divisible by 15 become "ping-pong"</li>
+
           </ol>
           <br>
           <div class="form-group">
             <label id="enterLabel"for="numberEntered">Enter a number</label>
             <input type="number" id="numberEntered">
-              <button id="play" type="submit" name="button" class="btn btn-warning">Play!</button>
+              <button id="play"type="submit" name="button" class="btn btn-warning">Play!</button>
           </div>
           <span id="numberList">
           </span>

@@ -1,4 +1,5 @@
 var formDivHeight = 250;
+var submitDivHeightSmall = 150;
 function pingpong(numberEntered){
   if (numberEntered % 15 == 0)
   return "ping-pong";
@@ -9,16 +10,36 @@ function pingpong(numberEntered){
   else
   return numberEntered;
 };
+function reverse(word){
+  var reverseword = "";
+  var wordArr = word.split("");
+  var wordArrReverse = [];
+  for (var i = (wordArr.length-1); i >= 0; i--) {
+    wordArrReverse.push(wordArr[i]);
+  }
+  reverseName = wordArrReverse.join("");
+  return reverseName;
+}
 $(document).ready(function() {
   $(window).resize(function(){
-    if($( window ).width() <= 599){
-      $("#mysidebarBackground").css("height", 250);
+      $("#myHeading").text("Welcome to the ping pong web page!");
+    if($(window).width() <= 400){
+      $("#myHeading").text("Page not supported at this window size!");
+    }
+    else if($(window).width() <= 720){
+      $("#mysidebarBackground").css("height", submitDivHeightSmall);
     }
     else{
-      $("#mysidebarBackground").css("height", formDivHeight);
-    }
+       $("#mysidebarBackground").css("height", formDivHeight);
+     }
   });
-  $("form").submit(function(){
+  $("form#arrayForm").submit(function(){
+    event.preventDefault();
+    var word = $("#word").val().replace(/\s/g,"");
+    word = reverse(word);
+    $("#reverseWord").text(word);
+  });
+  $("form#myForm").submit(function(){
     event.preventDefault();
     formDivHeight = 250;
     var numberEntered = parseInt($("#numberEntered").val());
@@ -32,7 +53,12 @@ $(document).ready(function() {
         $("#numberList").append("<li class='tempListItem'>" + pingpong(i) + "</li>");
       }
       $("#myFormBackground").css("height", formDivHeight);
-      $("#mysidebarBackground").css("height", formDivHeight);
+      if($(window).width() <= 719){
+        $("#mysidebarBackground").css("height", submitDivHeightSmall);
+      }
+      else{
+        $("#mysidebarBackground").css("height", formDivHeight);
+      }
       $("#numberList").slideDown(1000);
     }
     else{

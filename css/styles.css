@@ -55,23 +55,39 @@ a:hover {
 #myHeader{
   background-color: #66ff99;
 }
-@media only screen and (max-width: 600px){
-  #myForm{
+#arrayForm{
+  text-align: center;
+}
+@media only screen and (max-width: 720px){
+  #myForm, #mySidebar{
     float: none;
     margin-left: 0px;
     width: 100%
-  }
-  #mySidebar{
-    float: none;
-    margin-right: 0px;
-    width: 100%;
   }
   #mysidebarBackground, #myFormBackground{
     margin-right: 0px;
     margin-left: 0px;
   }
+  #mysidebarBackground{
+    height: 150px;
+  }
   #play, #enterLabel{
     margin-left: 0px;
     margin-right: 0px;
+  }
+  #arrayForm{
+    float: right;
+  }
+  #about{
+    float:left;
+  }
+  @media only screen and (max-width: 400px){
+    .container{
+      padding-bottom: 15px;
+    }
+    #myForm, #mySidebar{
+      display: none;
+    }
+
   }
 }
