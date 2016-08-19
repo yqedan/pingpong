@@ -20,18 +20,28 @@ function reverse(word){
   reverseName = wordArrReverse.join("");
   return reverseName;
 }
+function calcDivHeight(numberEntered){
+  formDivHeight += (20 * (numberEntered - 1));
+}
 $(document).ready(function() {
   $(window).resize(function(){
-      $("#myHeading").text("Welcome to the ping pong web page!");
-    if($(window).width() <= 400){
-      $("#myHeading").text("Page not supported at this window size!");
-    }
-    else if($(window).width() <= 720){
-      $("#mysidebarBackground").css("height", submitDivHeightSmall);
-    }
-    else{
-       $("#mysidebarBackground").css("height", formDivHeight);
+    if(formDivHeight == 250){
+      if($(window).width() <= 720){
+        $("#mysidebarBackground").css("height", submitDivHeightSmall);
+      }
+      else{
+         $("#mysidebarBackground").css("height", formDivHeight);
+       }
+   }
+   else{
+     if($(window).width() <= 703){
+       $("#mysidebarBackground").css("height", submitDivHeightSmall);
      }
+     else{
+        $("#mysidebarBackground").css("height", formDivHeight);
+      }
+
+   }
   });
   $("form#arrayForm").submit(function(){
     event.preventDefault();
@@ -48,18 +58,18 @@ $(document).ready(function() {
     $("#myFormBackground").css("height", formDivHeight);
     $("#mysidebarBackground").css("height", formDivHeight);
     if(101 > numberEntered && numberEntered > 0 ){
-      formDivHeight += (20 * (numberEntered - 1));
+      calcDivHeight(numberEntered);
       for (var i = 1; i <= numberEntered; i++){
         $("#numberList").append("<li class='tempListItem'>" + pingpong(i) + "</li>");
       }
       $("#myFormBackground").css("height", formDivHeight);
-      if($(window).width() <= 719){
+      if($(window).width() <= 720){
         $("#mysidebarBackground").css("height", submitDivHeightSmall);
       }
       else{
         $("#mysidebarBackground").css("height", formDivHeight);
       }
-      $("#numberList").slideDown(1000);
+      $("#numberList").slideDown(50*numberEntered);
     }
     else{
       $("#numberList").slideDown(200);

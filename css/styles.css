@@ -16,6 +16,9 @@ a:hover {
   padding-top: 15px;
   background-color: #99ccff;
 }
+#notSuppoted{
+  display: none;
+}
 #play, #enterLabel{
   margin-left: 20px;
 }
@@ -81,13 +84,15 @@ a:hover {
   #about{
     float:left;
   }
-  @media only screen and (max-width: 400px){
+  @media only screen and (max-width: 410px){
     .container{
       padding-bottom: 15px;
     }
-    #myForm, #mySidebar{
+    #myForm, #mySidebar, #welcome{
       display: none;
     }
-
+    #notSuppoted{
+      display: inline;
+    }
   }
 }
