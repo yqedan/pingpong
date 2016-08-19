@@ -12,11 +12,10 @@ a:hover {
   text-decoration: none;
 }
 .container{
-  padding-top: 15px;
-  background-color: #99ccff;
+background-color: #99ccff;
 }
-#notSuppoted{
-  display: none;
+.container{
+  padding-top: 15px;
 }
 #play, #enterLabel{
   margin-left: 20px;
@@ -24,29 +23,30 @@ a:hover {
 #enterLabel{
   margin-right: 20px;
 }
+#mysidebarBackground, #myFormBackground{
+  margin: 15px;
+  padding: 10px;
+  height: 250px;
+  background-color: #66ff99;
+}
+#mysidebarBackground{
+  margin-left: 0px;
+  margin-right: 7.5px;
+}
+#myFormBackground{
+  margin-left: 7.5px;
+  margin-right: 0px;
+}
+#notSuppoted{
+  display: none;
+}
 #mySidebar{
   float: left;
   width: 30%;
 }
-#mysidebarBackground{
-  margin: 15px;
-  margin-left: 7.5px;
-  margin-left: 0px;
-  background-color: #66ff99;
-  padding: 10px;
-  height: 250px;
-}
 #myForm{
   float: right;
   width: 70%;
-}
-#myFormBackground{
-  margin: 15px;
-  margin-left: 7.5px;
-  margin-right: 0px;
-  background-color: #66ff99;
-  padding: 10px;
-  height: 250px;
 }
 #myHeading{
   margin-top: 0px;
@@ -61,14 +61,14 @@ a:hover {
   text-align: center;
 }
 @media only screen and (max-width: 720px){
+  #mysidebarBackground, #myFormBackground, #play, #enterLabel{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
   #myForm, #mySidebar{
     float: none;
     margin-left: 0px;
     width: 100%
-  }
-  #mysidebarBackground, #myFormBackground, #play, #enterLabel{
-    margin-right: 0px;
-    margin-left: 0px;
   }
   #mysidebarBackground{
     height: 150px;
