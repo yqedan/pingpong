@@ -1,3 +1,80 @@
-#numberList{
-  display: none;
+*{
+  border-radius: 5px;
+}
+/*Secret address tag styling*/
+input{
+  width: auto;
+}
+a{
+  color: #333;
+  font-style: italic;
+  text-decoration: none;
+  cursor: text;
+}
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+button{
+  margin-left: 20px;
+}
+.container{
+  padding-top: 15px;
+  background-color: #99ccff;
+}
+#myName{
+  font-style: italic;
+}
+#mySidebar{
+  float: left;
+  width: 30%;
+}
+#mysidebarBackground{
+  margin: 15px;
+  margin-left: 7.5px;
+  margin-left: 0px;
+  background-color: #66ff99;
+  padding: 10px;
+  height: 250px;
+}
+#myForm{
+  float: right;
+  width: 70%;
+}
+#myFormBackground{
+  margin: 15px;
+  margin-left: 7.5px;
+  margin-right: 0px;
+  background-color: #66ff99;
+  padding: 10px;
+  height: 250px;
+}
+#myHeading{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 10px;
+  text-align: center;
+}
+#myHeader{
+  background-color: #66ff99;
+}
+@media only screen and (max-width: 600px){
+  #myForm{
+    float: none;
+    margin-left: 0px;
+    width: 100%
+  }
+  #mySidebar{
+    float: none;
+    margin-right: 0px;
+    width: 100%;
+  }
+  #mysidebarBackground{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  #myFormBackground{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 }
