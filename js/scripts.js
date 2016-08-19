@@ -12,11 +12,14 @@ function pingpong(numberEntered){
 $(document).ready(function() {
   $("form").submit(function(){
     event.preventDefault();
-    $(".tempList").remove();
+    $(".tempListItem").remove();
+    $("#numberList").hide();
     var numberEntered = parseInt($("#numberEntered").val());
-    alert(numberEntered);
-    for (var i = 1; i <= numberEntered; i++) {
-        $("#numberList").append("<li class='tempList'>" + pingpong(i) + "</li>");
-    }
+    if(101 > numberEntered && numberEntered > 0 )
+      for (var i = 1; i <= numberEntered; i++)
+        $("#numberList").append("<li class='tempListItem'>" + pingpong(i) + "</li>");
+    else
+      $("#numberList").append("<li class='tempListItem'>" + "Please Enter a positive integer up to 100!" + "</li>");
+    $("#numberList").slideDown(200);
   });
 });
