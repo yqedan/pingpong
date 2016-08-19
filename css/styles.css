@@ -1,7 +1,6 @@
 *{
   border-radius: 5px;
 }
-/*Secret address tag styling*/
 a{
   color: #333;
   font-style: italic;
@@ -67,22 +66,18 @@ a:hover {
     margin-left: 0px;
     width: 100%
   }
-  #mysidebarBackground, #myFormBackground{
+  #mysidebarBackground, #myFormBackground, #play, #enterLabel{
     margin-right: 0px;
     margin-left: 0px;
   }
   #mysidebarBackground{
     height: 150px;
   }
-  #play, #enterLabel{
-    margin-left: 0px;
-    margin-right: 0px;
-  }
   #arrayForm{
     float: right;
   }
   #about{
-    float:left;
+    float: left;
   }
   @media only screen and (max-width: 410px){
     .container{
@@ -93,6 +88,11 @@ a:hover {
     }
     #notSuppoted{
       display: inline;
+    }
+    @media only screen and (max-width: 210px){
+      #notSuppoted{
+        font-size: 24px;
+      }
     }
   }
 }

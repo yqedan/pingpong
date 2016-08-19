@@ -1,14 +1,18 @@
 var formDivHeight = 250;
 var submitDivHeightSmall = 150;
 function pingpong(numberEntered){
-  if (numberEntered % 15 == 0)
-  return "ping-pong";
-  else if(numberEntered % 3 == 0)
-  return "ping";
-  else if (numberEntered % 5 == 0)
-  return "pong";
-  else
-  return numberEntered;
+  if (numberEntered % 15 == 0){
+    return "ping-pong";
+  }
+  else if(numberEntered % 3 == 0){
+    return "ping";
+  }
+  else if (numberEntered % 5 == 0){
+    return "pong";
+  }
+  else{
+    return numberEntered;
+  }
 };
 function reverse(word){
   var reverseword = "";
@@ -40,7 +44,6 @@ $(document).ready(function() {
      else{
         $("#mysidebarBackground").css("height", formDivHeight);
       }
-
    }
   });
   $("form#arrayForm").submit(function(){
@@ -52,11 +55,11 @@ $(document).ready(function() {
   $("form#myForm").submit(function(){
     event.preventDefault();
     formDivHeight = 250;
-    var numberEntered = parseInt($("#numberEntered").val());
     $(".tempListItem").remove();
     $("#numberList").hide();
     $("#myFormBackground").css("height", formDivHeight);
     $("#mysidebarBackground").css("height", formDivHeight);
+    var numberEntered = parseInt($("#numberEntered").val());
     if(101 > numberEntered && numberEntered > 0 ){
       calcDivHeight(numberEntered);
       for (var i = 1; i <= numberEntered; i++){
