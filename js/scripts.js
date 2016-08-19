@@ -1,5 +1,12 @@
 function pingpong(numberEntered){
-  return numberEntered;
+  if (numberEntered % 15 == 0)
+    return "ping-pong";
+  else if(numberEntered % 3 == 0)
+    return "ping";
+  else if (numberEntered % 5 == 0)
+    return "pong";
+  else
+    return numberEntered;
 };
 
 $(document).ready(function() {
