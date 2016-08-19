@@ -1,4 +1,6 @@
-function pingpomng(){};
+function pingpong(numberEntered){
+  return numberEntered;
+};
 
 $(document).ready(function() {
   $("form").submit(function(){
@@ -6,9 +8,8 @@ $(document).ready(function() {
     $("#tempList").remove();
     var numberEntered = parseInt($("#numberEntered").val());
     alert(numberEntered);
-    $("#numberList").append("<li id='tempList'>" + numberEntered + "</li>");
-    // for (var i = 0; i < numberEntered; i++) {
-    //
-    // }
+    for (var i = 1; i <= numberEntered; i++) {
+        $("#numberList").append("<li id='tempList'>" + pingpong(i) + "</li>");
+    }
   });
 });
