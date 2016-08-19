@@ -12,11 +12,11 @@ function pingpong(numberEntered){
 $(document).ready(function() {
   $("form").submit(function(){
     event.preventDefault();
-    $("#tempList").remove();
+    $(".tempList").remove();
     var numberEntered = parseInt($("#numberEntered").val());
     alert(numberEntered);
     for (var i = 1; i <= numberEntered; i++) {
-        $("#numberList").append("<li id='tempList'>" + pingpong(i) + "</li>");
+        $("#numberList").append("<li class='tempList'>" + pingpong(i) + "</li>");
     }
   });
 });
