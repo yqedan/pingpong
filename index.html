@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.1.0.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Ping Pong</title>
-</head>
-<body>
-  <div class="container">
-    <div id="myHeader">
-      <h1 id="myHeading"><span id="welcome">Welcome to the ping pong web page!  <img src="http://www.clipartkid.com/images/632/ping-pong-clipart-mSK4e5-clipart.png" width="50px"></span><span id ="notSuppoted">Page not supported at this window size!</span></h1>
-    </div>
-    <div>
-      <div id="mySidebar">
-        <div id="mysidebarBackground">
-          <div id="about"
-          <h3>About my page</h3>
-          <ul>
-            <li>Created by:<ul><li><a href="http://www.google.com/search?q=Yusuf+Qedan">Yusuf Qedan</a></li></ul></li>
-            <li>Github Username:<ul><li><a href="https://github.com/yqedan">yqedan</a></li></ul></li>
-          </ul>
-        </div>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Ping Pong</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="myHeader">
+        <h1 id="myHeading"><span id="welcome">Welcome to the ping pong web page!  <img src="http://www.clipartkid.com/images/632/ping-pong-clipart-mSK4e5-clipart.png" width="50px"></span><span id ="notSuppoted">Page not supported at this window size!</span></h1>
+      </div>
+        <div id="mySidebar">
+          <div id="mysidebarBackground">
+            <div id="about">
+            <h3>About my page</h3>
+            <ul>
+              <li>Created by:
+                <ul>
+                  <li><a href="http://www.google.com/search?q=Yusuf+Qedan">Yusuf Qedan</a></li>
+                </ul>
+              </li>
+              <li>Github Username:
+                <ul>
+                  <li><a href="https://github.com/yqedan">yqedan</a></li>
+                </ul>
+              </li>
+            </ul>
+            </div>
           <form id="arrayForm">
             <div class="form-group">
               <label id="enterLabel"for="numberEntered">Enter your word.</label><br>
@@ -30,7 +37,7 @@
             </div>
             <span id="reverseWord"></span>
           </form>
-          </div>
+        </div>
       </div>
       <form id="myForm">
         <div id="myFormBackground">
@@ -39,19 +46,17 @@
             <li>Numbers divisible by 3 become "ping"</li>
             <li>Numbers divisible by 5 become "ping"</li>
             <li>Numbers divisible by 15 become "ping-pong"</li>
-
           </ol>
           <br>
           <div class="form-group">
             <label id="enterLabel"for="numberEntered">Enter a number</label>
             <input type="number" id="numberEntered">
-              <button id="play"type="submit" name="button" class="btn btn-warning">Play!</button>
+            <button id="play"type="submit" name="button" class="btn btn-warning">Play!</button>
           </div>
           <span id="numberList">
           </span>
         </div>
       </form>
     </div>
-  </div>
-</body>
+  </body>
 </html>

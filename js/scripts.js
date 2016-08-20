@@ -1,5 +1,8 @@
+//Global Variables
 var formDivHeight = 250;
 var submitDivHeightSmall = 150;
+
+//Business Logic
 function pingpong(numberEntered){
   if (numberEntered % 15 == 0){
     return "ping-pong";
@@ -27,6 +30,8 @@ function reverse(word){
 function calcDivHeight(numberEntered){
   formDivHeight += (20 * (numberEntered - 1));
 }
+
+//User interface logic
 $(document).ready(function() {
   $(window).resize(function(){
     if(formDivHeight == 250){
